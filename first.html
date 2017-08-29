@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body
+{
+background-image: url("https://unsplash.com/photos/HDMqSQxjNBE/download?force=true");
+background-size: cover;
+}
+</style>
+</head>
+<body>   
+<form name="calculate" align="center">
+<b><i>Amount :(*in INR)</i></b>
+<br>
+<br>
+<input type ="text" name = "number1"><p><b> Enter type of suitable GST percentage in number i.e (18% = 18)</b></p>
+<br>
+<b><i>Select Rate of GST:(*in INR)</i></b>
+<br>
+<br>
+<input type ="text" name = "number2">
+<br>
+<br>
+<br>
+<b><i>GST price:(*in INR)</i></b>
+<br>
+<br>
+<input type ="text" name ="result">
+<br>
+<br>
+<b><i>NET price:(*in INR)</i></b>
+<br>
+<br>
+<input type="text" name="net">
+<br>
+<br>
+<input type="button" value="output" onClick="sumValues()">
+</form>
+<script language="javascript" type="text/javascript">
+function sumValues()
+{
+var num1, num2 ,answer;
+num1 = Number(document.calculate.number1.value);
+num2=  Number(document.calculate.number2.value);
+GST = (num1 * num2)/100;
+document.calculate.result.value = GST;
+NET = num1 + GST;
+document.calculate.net.value = NET;
+}  
+
+</script> 
+</body> 
+</html>
